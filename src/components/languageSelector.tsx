@@ -8,11 +8,11 @@ type _props = {
 
 function LanguageSelector(){
     return(
-        <div>
-            <p>Pe̍h Ōe Jī</p>
-            <p>漢羅 lām</p>
-            <p>漢字</p>
-            <p>English</p>
+        <div className="language-selector-container">
+            <p className="languageOption">Pe̍h Ōe Jī</p>
+            <p className="languageOption">漢羅 lām</p>
+            <p className="languageOption">漢字</p>
+            <p className="languageOption">English</p>
         </div>
     )
 }

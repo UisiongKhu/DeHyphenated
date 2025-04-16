@@ -2,12 +2,27 @@
   background-color: green;
   margin-bottom: 0.1rem;
   padding: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
 }
 .homepage-title{
   text-align: left;
   font-size: 2rem;
   font-family: sans-serif;
-  color: white;
+}
+.language-selector-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: end;
+  width: 20rem;
+}
+.language-option{
+  font-size: 10pt;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .homepage-inputarea-container{
   display: flex;
@@ -27,8 +42,7 @@
 
 .content-button{
   border-radius: 10px;
-  border-width: 1px;
-  border-color: black;
+  border-width: 0;
   height: 50px;
   width: 150px;
   font-size: 12pt;
