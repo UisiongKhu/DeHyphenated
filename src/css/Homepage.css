@@ -1,0 +1,72 @@
+.homepage-header{
+  background-color: green;
+  margin-bottom: 0.1rem;
+  padding: 0.1rem;
+}
+.homepage-title{
+  text-align: left;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: white;
+}
+.homepage-inputarea-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-self: center;
+}
+.content-textarea{
+  height: 200px;
+  width: 500px;
+}
+.content-button-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.content-button{
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: black;
+  height: 50px;
+  width: 150px;
+  font-size: 12pt;
+  margin: 1rem;
+}
+#convertButton{
+  background-color: goldenrod;
+  margin-left: 0rem;
+}
+#clearButton{
+  background-color: orangered;
+}
+#copyButton{
+  background-color: #CCCCCC;
+}
+
+.homepage-footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+}
+
+.homepage-footer {
+  height: 3rem;
+  margin-bottom: 0.1rem;
+  flex-shrink: 1;
+}
+div#footer-1 {
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.copyrights{
+  color: white;
+  order: 2;
+}
+.date{
+  color: white;
+  order: 3;
+}
