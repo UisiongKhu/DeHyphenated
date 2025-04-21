@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import HomepageHeader from './HomepageHeader';
 import HomepageContent from './HomepageContent';
 import HomepageFooter from './HomepageFooter';
+import './locale/i18n';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

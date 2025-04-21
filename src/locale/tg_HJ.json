@@ -1,0 +1,30 @@
+{
+    "Title": "DeHyphened - 共連劃旦血捔",
+    "Interactions":{
+        "ConvertButton": "轉換",
+        "ClearButton": "清除內容",
+        "CopyButton": "卡鱉起來"
+    },
+    "Component":{
+        "CustomTextAreaPlaceholder": "請治遮輸入卜愛轉換个文字..."
+    },
+    "Datetime":{
+        "year": "年",
+        "month": "月",
+        "week": "礼拜",
+        "weekdays":{
+            "0": "礼拜",
+            "1": "拜一",
+            "2": "拜二",
+            "3": "拜三",
+            "4": "拜四",
+            "5": "拜五",
+            "6": "拜六"
+        },
+        "first": "初",
+        "day": "日",
+        "hour": "點",
+        "minute": "分",
+        "second": "秒"
+    }
+}

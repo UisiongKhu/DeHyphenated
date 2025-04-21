@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+i18next-25.0.0.tar.gz
 
 # testing
 /coverage

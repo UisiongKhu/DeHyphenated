@@ -1,0 +1,30 @@
+{
+    "Title": "DeHyphened - Kā liân oe̍h tàn hiat ka̍k.",
+    "Interactions":{
+        "ConvertButton": "Choán ōaⁿ",
+        "ClearButton": "Chheng tû lōe iông",
+        "CopyButton": "Khá pih khí lâi"
+    },
+    "Component":{
+        "CustomTextAreaPlaceholder": "Chhiáⁿ tī chia su ji̍p beh ài choán ōaⁿ ê bûn jī..."
+    },
+    "Datetime":{
+        "year": "nî",
+        "month": "goe̍h",
+        "week": "lé pài",
+        "weekdays":{
+            "0": "lé pài",
+            "1": "pài it",
+            "2": "pài jī",
+            "3": "pài saⁿ",
+            "4": "pài sì",
+            "5": "pài gō͘",
+            "6": "pài la̍k"
+        },
+        "first": "chhe",
+        "day": "ji̍t",
+        "hour": "tiám",
+        "minute": "hun",
+        "second": "bió"
+    }
+}
