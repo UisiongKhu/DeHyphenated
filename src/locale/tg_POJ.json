@@ -26,5 +26,11 @@
         "hour": "tiám",
         "minute": "hun",
         "second": "bió"
+    },
+    "Error":{
+        "DeHyphened":{
+            "NotALegalKhinsiannhu": "M̄ sī ha̍p kui kí ê khin siaⁿ hû",
+            "NotALegalConvertMethod": "M̄ sī ha̍p kui kí ê choán ōaⁿ hong sek"
+        }
     }
 }

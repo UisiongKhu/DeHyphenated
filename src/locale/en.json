@@ -9,22 +9,28 @@
         "CustomTextAreaPlaceholder": "Enter the text you want to convert..."
     },
     "Datetime":{
-            "year": "year",
-            "month": "month",
-            "week": "week",
-            "weekdays":{
-                "0": "Sunday",
-                "1": "Monday",
-                "2": "Tuesday",
-                "3": "Wednesday",
-                "4": "Thursday",
-                "5": "Friday",
-                "6": "Saturday"
-            },
-            "first": "",
-            "day": "day",
-            "hour": "hour",
-            "minute": "minute",
-            "second": "second"
+        "year": "year",
+        "month": "month",
+        "week": "week",
+        "weekdays":{
+            "0": "Sunday",
+            "1": "Monday",
+            "2": "Tuesday",
+            "3": "Wednesday",
+            "4": "Thursday",
+            "5": "Friday",
+            "6": "Saturday"
+        },
+        "first": "",
+        "day": "day",
+        "hour": "hour",
+        "minute": "minute",
+        "second": "second"
+    },
+    "Error":{
+        "DeHyphened":{
+            "NotALegalKhinsiannhu": "Not A Proper Nature Tone Mark",
+            "NotALegalConvertMethod": "Not A Proper Convert Method"
         }
+    }
 }
