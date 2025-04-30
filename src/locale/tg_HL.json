@@ -29,7 +29,7 @@
     },
     "Error":{
         "DeHyphened":{
-            "NotALegalKhinsiannhu": "M̄ 是合規矩 ê 輕聲符",
+            "NotALegalNatureToneMark": "M̄ 是合規矩 ê 輕聲符",
             "NotALegalConvertMethod": "M̄ 是合規矩 ê 轉換方法"
         }
     }

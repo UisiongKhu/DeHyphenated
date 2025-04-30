@@ -6,6 +6,8 @@ import HomepageHeader from './HomepageHeader';
 import HomepageContent from './HomepageContent';
 import HomepageFooter from './HomepageFooter';
 import './locale/i18n';
+import credentials from './credentials/credentials.json';
+import { getProperNounsSheet } from './tools/DeHyphened';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

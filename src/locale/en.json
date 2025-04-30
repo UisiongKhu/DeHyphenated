@@ -29,7 +29,7 @@
     },
     "Error":{
         "DeHyphened":{
-            "NotALegalKhinsiannhu": "Not A Proper Nature Tone Mark",
+            "NotALegalNatureToneMark": "Not A Proper Nature Tone Mark",
             "NotALegalConvertMethod": "Not A Proper Convert Method"
         }
     }
