@@ -4,7 +4,7 @@ import './css/Homepage.css'
 import { render } from "@testing-library/react"
 import CustomTextarea from "./components/customTextarea";
 import { useTranslation } from "react-i18next";
-import DeHyphened from "./tools/DeHyphened";
+import DeHyphenated from "./tools/DeHyphenated";
 import credentials from './credentials/credentials.json';
 
 
@@ -22,7 +22,7 @@ function HomepageContent(/*props : props*/) {
     const handleConvertButtonClicked = () => {
         var _t : string = "";
         try{
-            _t = DeHyphened(textAreaContent, sheet,"tiam","langphang");
+            _t = DeHyphenated(textAreaContent, sheet,"tiam","langphang");
         }catch(e){
             if(e instanceof Error){
                 alert(e.message);

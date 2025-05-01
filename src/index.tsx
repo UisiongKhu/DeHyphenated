@@ -7,7 +7,7 @@ import HomepageContent from './HomepageContent';
 import HomepageFooter from './HomepageFooter';
 import './locale/i18n';
 import credentials from './credentials/credentials.json';
-import { getProperNounsSheet } from './tools/DeHyphened';
+import { getProperNounsSheet } from './tools/DeHyphenated';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
