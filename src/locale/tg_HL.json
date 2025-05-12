@@ -1,6 +1,7 @@
 {
     "Title": "DeHyphened - Kā 連劃 tàn hiat ka̍k.",
     "Interactions":{
+        "LanguageDropdownButton": "漢羅 lām",
         "ConvertButton": "轉換",
         "ClearButton": "清除內容",
         "CopyButton": "Khá pih 起來"

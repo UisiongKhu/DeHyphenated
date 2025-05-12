@@ -1,6 +1,7 @@
 {
     "Title": "DeHyphened - Throws the hyphens away.",
     "Interactions":{
+        "LanguageDropdownButton": "English",
         "ConvertButton": "Convert",
         "ClearButton": "Clear",
         "CopyButton": "Copy"

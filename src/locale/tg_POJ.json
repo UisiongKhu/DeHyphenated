@@ -1,6 +1,7 @@
 {
     "Title": "DeHyphened - Kā liân oe̍h tàn hiat ka̍k.",
     "Interactions":{
+        "LanguageDropdownButton": "Pe̍h Ōe Jī",
         "ConvertButton": "Choán ōaⁿ",
         "ClearButton": "Chheng tû lōe iông",
         "CopyButton": "Khá pih khí lâi"

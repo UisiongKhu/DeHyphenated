@@ -1,11 +1,10 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import './css/Homepage.css'
-import { render } from "@testing-library/react"
 import CustomTextarea from "./components/customTextarea";
 import { useTranslation } from "react-i18next";
 import DeHyphenated from "./tools/DeHyphenated";
 import credentials from './credentials/credentials.json';
+import { ButtonGroup, Button, Container, Row, Dropdown } from "react-bootstrap";
 
 
 
@@ -35,19 +34,40 @@ function HomepageContent(/*props : props*/) {
         console.log('clearButton clicked.');
         setTextAreaContent("");
     }
+    async function handleCopyButtonClicked(){
+        if(navigator.clipboard){ // Deploy kàu HTTPS chiah thang ēng Clipboard API
+            await navigator.clipboard.writeText(textAreaContent);
+        }else{ // Bô tio̍h ēng lāu hong hoat
+            let _textArea = document.createElement('textarea');
+            _textArea.value = textAreaContent;
+            _textArea.style.position = 'absolute';
+            _textArea.style.opacity = '0';
+            _textArea.style.left = '-99999999px';
+            _textArea.style.top = '-99999999px';
+            document.body.appendChild(_textArea);
+            _textArea.focus();
+            _textArea.select();
+            document.execCommand('copy');
+            _textArea.remove();
+        }
+    }
     const handleTextareaChanged = (newContent : string) => {
         setTextAreaContent(newContent);
     }
 
     return(
-        <div className="homepage-inputarea-container">
-            <CustomTextarea rows={10} cols={20} value={textAreaContent} placeholder={t('Component.CustomTextAreaPlaceholder')} onChange={handleTextareaChanged}/>
-            <div className="content-button-container">
-                <button className="content-button" id="convertButton" onClick={handleConvertButtonClicked} >{t('Interactions.ConvertButton')}</button>
-                <button className="content-button" id="clearButton" onClick={handleClearButtonClicked} >{t('Interactions.ClearButton')}</button>
-                <button className="content-button" id="copyButton" >{t('Interactions.CopyButton')}</button>
-            </div>
-        </div>
+        <Container className="homepage-inputarea-container">
+            <Row>
+                <CustomTextarea rows={10} cols={20} value={textAreaContent} placeholder={t('Component.CustomTextAreaPlaceholder')} onChange={handleTextareaChanged}/>
+            </Row>
+            <Row>
+                <ButtonGroup className="border-top-radius-0">
+                    <Button variant="primary" /*className="content-button"*/ id="convertButton" onClick={handleConvertButtonClicked} >{t('Interactions.ConvertButton')}</Button>
+                    <Button variant="danger" /*className="content-button"*/ id="clearButton" onClick={handleClearButtonClicked} >{t('Interactions.ClearButton')}</Button>
+                    <Button variant="success" /*className="content-button"*/ id="copyButton" onClick={handleCopyButtonClicked}>{t('Interactions.CopyButton')}</Button>
+                </ButtonGroup>
+        </Row>
+        </Container>
     )
 }
 

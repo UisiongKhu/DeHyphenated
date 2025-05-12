@@ -23,7 +23,7 @@ class CustomTextarea extends React.Component<_props> {
 
     render() {
         return(
-            <textarea className="content-textarea" rows={this.props.rows} cols={this.props.cols} value={this.props.value} placeholder={this.props.placeholder ? this.props.placeholder : ""} onChange={this.handleInputChange}></textarea>
+            <textarea id="content-textarea" className="content-textarea" rows={this.props.rows} cols={this.props.cols} value={this.props.value} placeholder={this.props.placeholder ? this.props.placeholder : ""} onChange={this.handleInputChange}></textarea>
         )
     }
 }

@@ -1,6 +1,7 @@
 {
     "Title": "DeHyphened - 共連劃旦血捔",
     "Interactions":{
+        "LanguageDropdownButton": "漢字",
         "ConvertButton": "轉換",
         "ClearButton": "清除內容",
         "CopyButton": "卡鱉起來"

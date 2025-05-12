@@ -6,18 +6,27 @@ import HomepageHeader from './HomepageHeader';
 import HomepageContent from './HomepageContent';
 import HomepageFooter from './HomepageFooter';
 import './locale/i18n';
-import credentials from './credentials/credentials.json';
-import { getProperNounsSheet } from './tools/DeHyphenated';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Stack, Col } from 'react-bootstrap';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+
 root.render(
   <React.StrictMode>
-    <HomepageHeader />
-    <HomepageContent />
-    <HomepageFooter />
+    <div className='d-flex flex-column vh-100'>
+      <div className='flex-fill flex-grow-1 mb-auto vh-90'>
+        <HomepageHeader />
+        <div className='pt-5'>
+          <HomepageContent />
+        </div>
+      </div>
+      <div className='mt-auto vh-10'>
+        <HomepageFooter />
+      </div>
+    </div>
   </React.StrictMode>
 );
 
