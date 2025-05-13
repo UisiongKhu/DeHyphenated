@@ -4,7 +4,7 @@ import CustomTextarea from "./components/customTextarea";
 import { useTranslation } from "react-i18next";
 import DeHyphenated from "./tools/DeHyphenated";
 import credentials from './credentials/credentials.json';
-import { ButtonGroup, Button, Container, Row, Dropdown } from "react-bootstrap";
+import { Button, Container, Row, Col, Stack } from "react-bootstrap";
 
 
 
@@ -58,15 +58,21 @@ function HomepageContent(/*props : props*/) {
     return(
         <Container className="homepage-inputarea-container">
             <Row>
-                <CustomTextarea rows={10} cols={20} value={textAreaContent} placeholder={t('Component.CustomTextAreaPlaceholder')} onChange={handleTextareaChanged}/>
+                <Col className="w-70 h-100 me-1">
+                    <CustomTextarea value={textAreaContent} placeholder={t('Component.CustomTextAreaPlaceholder')} onChange={handleTextareaChanged} style={{
+                        width: '100%',
+                        height: '30vh',
+                        resize: 'none',
+                    }}/>
+                </Col>
+                <Col className="w-30 h-30">
+                    <Stack direction="vertical" gap={2} className="vw-10">
+                        <Button variant="success" /*className="content-button"*/ id="convertButton" onClick={handleConvertButtonClicked} >{t('Interactions.ConvertButton')}</Button>
+                        <Button variant="outline-danger" /*className="content-button"*/ id="clearButton" onClick={handleClearButtonClicked} >{t('Interactions.ClearButton')}</Button>
+                        <Button variant="outline-success" /*className="content-button"*/ id="copyButton" onClick={handleCopyButtonClicked}>{t('Interactions.CopyButton')}</Button>
+                    </Stack>
+                </Col>
             </Row>
-            <Row>
-                <ButtonGroup className="border-top-radius-0">
-                    <Button variant="primary" /*className="content-button"*/ id="convertButton" onClick={handleConvertButtonClicked} >{t('Interactions.ConvertButton')}</Button>
-                    <Button variant="danger" /*className="content-button"*/ id="clearButton" onClick={handleClearButtonClicked} >{t('Interactions.ClearButton')}</Button>
-                    <Button variant="success" /*className="content-button"*/ id="copyButton" onClick={handleCopyButtonClicked}>{t('Interactions.CopyButton')}</Button>
-                </ButtonGroup>
-        </Row>
         </Container>
     )
 }
