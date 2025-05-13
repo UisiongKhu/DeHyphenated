@@ -12,7 +12,7 @@ function HomepageContent(/*props : props*/) {
     const {t, i18n} = useTranslation();
     const [textAreaContent, setTextAreaContent] = useState("");
     const [sheet, setSheet] = useState({});
-    var fetchUrl = `https://sheets.googleapis.com/v4/spreadsheets/${credentials.spreadsheetID}/values/${'A2:E100'}?key=${credentials.apiKey}`;
+    var fetchUrl = `https://sheets.googleapis.com/v4/spreadsheets/${credentials.spreadsheetID}/values/${'A2:E1000'}?key=${credentials.apiKey}`;
 
     useEffect(()=>{ // Query the sheet after HomepageContent rendered.
         fetch(fetchUrl).then((res)=>res.json()).then(setSheet);
