@@ -7,7 +7,18 @@
         "CopyButton": "Khá pih 起來"
     },
     "Component":{
-        "CustomTextAreaPlaceholder": "請 tī chia 輸入 beh ài 轉換 ê 文字..."
+        "CustomTextAreaPlaceholder": "請 tī chia 輸入 beh ài 轉換 ê 文字...",
+        "ExtraSheetSelector": {
+            "Main": "Default 資料",
+            "Division": "行政區劃名",
+            "Mountain": "山名",
+            "Road": "路名",
+            "RiverAndWaterFacility": "溪．河．水利設施名"
+        }
+    },
+    "Workflow":{
+        "Loading": "Koh teh 讀...",
+        "Loaded": "讀好勢 ah"
     },
     "Datetime":{
         "year": "年",

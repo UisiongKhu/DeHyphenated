@@ -7,7 +7,18 @@
         "CopyButton": "卡鱉起來"
     },
     "Component":{
-        "CustomTextAreaPlaceholder": "請治遮輸入卜愛轉換个文字..."
+        "CustomTextAreaPlaceholder": "請治遮輸入卜愛轉換个文字...",
+        "ExtraSheetSelector": {
+            "Main": "Default 資料",
+            "Division": "行政區劃名",
+            "Mountain": "山名",
+            "Road": "路名",
+            "RiverAndWaterFacility": "溪．河．水利設施名"
+        }
+    },
+    "Workflow":{
+        "Loading": "閣塊讀……",
+        "Loaded": "讀好勢唖"
     },
     "Datetime":{
         "year": "年",

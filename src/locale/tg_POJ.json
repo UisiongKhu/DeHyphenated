@@ -7,7 +7,18 @@
         "CopyButton": "Khá pih khí lâi"
     },
     "Component":{
-        "CustomTextAreaPlaceholder": "Chhiáⁿ tī chia su ji̍p beh ài choán ōaⁿ ê bûn jī..."
+        "CustomTextAreaPlaceholder": "Chhiáⁿ tī chia su ji̍p beh ài choán ōaⁿ ê bûn jī...",
+        "ExtraSheetSelector": {
+            "Main": "Default Chu liāu",
+            "Division": "Hêng chèng khu miâ",
+            "Mountain": "Soaⁿ miâ",
+            "Road": "Lō͘ miâ",
+            "RiverAndWaterFacility": "Khe, hô, chúi lī siat si miâ"
+        }
+    },
+    "Workflow":{
+        "Loading": "Koh teh tha̍k...",
+        "Loaded": "Tha̍k hó sè ah"
     },
     "Datetime":{
         "year": "nî",

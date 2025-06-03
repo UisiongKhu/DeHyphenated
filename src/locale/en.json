@@ -7,7 +7,18 @@
         "CopyButton": "Copy"
     },
     "Component":{
-        "CustomTextAreaPlaceholder": "Enter the text you want to convert..."
+        "CustomTextAreaPlaceholder": "Enter the text you want to convert...",
+        "ExtraSheetSelector": {
+            "Main": "Default Data",
+            "Division": "Administration Division Name",
+            "Mountain": "Mountain Name",
+            "Road": "Road Name",
+            "RiverAndWaterFacility": "River and Water Facility Name"
+        }
+    },
+    "Workflow":{
+        "Loading": "Loading...",
+        "Loaded": "Loaded"
     },
     "Datetime":{
         "year": "year",

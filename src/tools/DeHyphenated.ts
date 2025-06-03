@@ -64,11 +64,18 @@ const Dehyphenate = (data: Array<string>, word: string) => {
     };
 }
 
-const processWord = (list: Array<Array<string>>, word: string) => {
+const isFirstWordSame = (wordInDict : string, wordInput : string) => {
+    return wordInDict.split(' ').at(0)===wordInput;
+}
+
+const processWord = (list: Array<Array<string>>, word: string, NoSeperationFlag?: boolean) => {
     console.log(`In processWord(), word=${word}`);
     var returnData = rData;
     var obj = { prefix: new Prefix(), postfix: new Postfix() };
     var originalWord = word;
+    if(NoSeperationFlag === undefined){
+        NoSeperationFlag = false;
+    }
     obj = splitMarks(word);
     word = word.substring((obj.prefix.lastIndex===-1)? 0 :obj.prefix.lastIndex+1, obj.postfix.firstIndex);
     console.log(`Processing the word=${word}`);
@@ -87,7 +94,7 @@ const processWord = (list: Array<Array<string>>, word: string) => {
             if(returnData.uppercaseMethod === 'B' || returnData.uppercaseMethod === 'C' || returnData.uppercaseMethod === 'D'){
                 break;
             }
-        } else if (list[i][1].includes(word) && isUppercase(word)) {
+        } else if (list[i][1].includes(word) && list[i][1].split(' ').length > word.split(' ').length && isFirstWordSame(list[i][1][0],word) && isUppercase(word)) {
             console.log(`Data= ${list[i][1]} including word= ${word} `);
             returnData = { data: word, continue: true, processed: false, uppercaseMethod: '', hyphened: false};
             returnData.data = originalWord;
@@ -97,19 +104,24 @@ const processWord = (list: Array<Array<string>>, word: string) => {
 
     if(returnData.uppercaseMethod === 'B' || returnData.uppercaseMethod === 'C' || returnData.uppercaseMethod === 'D' || returnData.uppercaseMethod === ''){
         try {
-            originalWord = replaceSpaces(originalWord, 'tiam', 'langphang', false) as string;
-            if(returnData.uppercaseMethod === 'B' || returnData.uppercaseMethod === 'D'){
-                var wordArray = originalWord.split(' ');
-                wordArray.forEach(syllable => {
-                    wordArray[wordArray.indexOf(syllable)] = syllable[0].toUpperCase() + syllable.slice(1, syllable.length);
-                });
-                if(returnData.uppercaseMethod === 'D') wordArray[wordArray.length-1] = wordArray[wordArray.length-1].toLowerCase();
-                console.log(`originalWord=${originalWord} wordArray=${wordArray}`);
-                originalWord = wordArray.join(' ');
+            if(!NoSeperationFlag && returnData.uppercaseMethod===''){
+                returnData.data = originalWord;
+            }else{
+                originalWord = replaceSpaces(originalWord, 'tiam', 'langphang', false) as string;
+                if(returnData.uppercaseMethod === 'B' || returnData.uppercaseMethod === 'D'){
+                    var wordArray = originalWord.split(' ');
+                    wordArray.forEach(syllable => {
+                        wordArray[wordArray.indexOf(syllable)] = syllable[0].toUpperCase() + syllable.slice(1, syllable.length);
+                    });
+                    if(returnData.uppercaseMethod === 'D') wordArray[wordArray.length-1] = wordArray[wordArray.length-1].toLowerCase();
+                    console.log(`originalWord=${originalWord} wordArray=${wordArray}`);
+                    originalWord = wordArray.join(' ');
+                }
+                
+                console.log(`No translation, UppercaseMethod= ${returnData.uppercaseMethod} word= ${originalWord}.`);
+                returnData.data = originalWord;
             }
             
-            console.log(`No translation, UppercaseMethod= ${returnData.uppercaseMethod} word= ${originalWord}.`);
-            returnData.data = originalWord;
         } catch (e) {
             throw e;
         }
@@ -119,12 +131,15 @@ const processWord = (list: Array<Array<string>>, word: string) => {
     return returnData;
 }
 
-const replaceProperNouns = (originalText: string, sheet : any) => {
+const replaceProperNouns = (originalText: string, sheet : any, sheetsAfter? : boolean) => {
     var textArray : Array<String> = originalText.split(' ');
     var ProperWordsCompoundFlag= {'front':-1, 'end':-1};
     var tempStr : string = "";
     var processedText : String = '';
     var returnData = rData;
+    if(sheetsAfter === undefined){
+        sheetsAfter = false;
+    }
     console.log(`In replaceProperNouns(), \n textArray: ${textArray}`)
     for(var i=0; i<textArray.length; i++){
         if(textArray[i]==='') continue;
@@ -147,7 +162,7 @@ const replaceProperNouns = (originalText: string, sheet : any) => {
                 tempStr = tempStr.toString()+textArray[j];
             }
             //console.log(`Processing tempStr from ${ProperWordsCompoundFlag.front} to ${ProperWordsCompoundFlag.end} = ${tempStr}`)
-            returnData = processWord(sheet.values,tempStr);
+            returnData = processWord(sheet.values,tempStr, sheetsAfter);
             if(returnData.continue){
                 continue;
             }
@@ -216,13 +231,20 @@ const replaceSpaces = (originalText: string, natureToneMark?:string, convertMeth
     return _t;
 }
 
-const DeHyphenated = (text:string, sheet: Object, natureToneMark?:string, convertMethod?:string) => {
+const DeHyphenated = (text:string, sheets: Array<Object> , natureToneMark?:string, convertMethod?:string) => {
     var convertedText: any;
     try{
-        convertedText = replaceProperNouns(text, sheet);
+        convertedText = text;
+        console.log(`DEBUG: sheet.length=${sheets.length}`);
+        for(var i=0;i<sheets.length;i++){
+            convertedText = replaceProperNouns(convertedText, sheets[i], (i===sheets.length-1)?true:false);
+            console.log(`DEBUG: i=${i}, convertedText=${convertedText}`);
+        }
         convertedText = replaceSpaces(convertedText, natureToneMark, convertMethod, true);
+        console.log(`DEBUG: after replaceSpaces(), convertedText=${convertedText}`);
     }catch(e){
         if(e instanceof Error){
+            console.log(e.message);
             return e;
         }
     }
