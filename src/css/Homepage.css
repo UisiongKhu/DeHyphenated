@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'poj-phiaute';
+    src: url('../media/poj-Phiaute-Regular.otf');
+}
+
+@font-face {
+    font-family: 'huninn';
+    src: url('../media/jf-openhuninn-2.1.ttf');
+}
+
+@font-face {
+    font-family: 'GenSekiGothicJP-M';
+    src: url('../media/GenSekiGothic2JP-M.otf');
+}
+
+.homepage-title-latin {
+    font-family: 'poj-phiaute', sans-serif
+}
+
+.homepage-title-hanji {
+    font-family: 'poj-phiaute', 'GenSekiGothicJP-M', sans-serif
+}
