@@ -6,6 +6,7 @@
 .pnp.js
 i18next-25.0.0.tar.gz
 /src/credentials/**
+/src/media/**
 
 # testing
 /coverage

@@ -1,5 +1,6 @@
 {
     "Title": "DeHyphenated - Kā liân oe̍h tàn hiat ka̍k.",
+    "TitleShort": "DeHyphenated - Khì Liân Oe̍h",
     "Interactions":{
         "LanguageDropdownButton": "Pe̍h Ōe Jī",
         "ConvertButton": "Choán ōaⁿ",
@@ -8,7 +9,8 @@
     },
     "Component":{
         "CustomTextAreaPlaceholder": "Chhiáⁿ tī chia su ji̍p beh ài choán ōaⁿ ê bûn jī...",
-        "ExtraSheetSelector": {
+        "ExtraSheetSelector":{
+            "SelectAll": "Chiâu beh tha̍k",
             "Main": "Default Chu liāu",
             "Division": "Hêng chèng khu miâ",
             "Mountain": "Soaⁿ miâ",

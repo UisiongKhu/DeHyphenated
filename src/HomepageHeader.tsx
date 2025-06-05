@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LanguageSelector from './components/languageSelector';
 import { useTranslation } from 'react-i18next';
 import { Stack } from 'react-bootstrap';
 import './css/Homepage.css';
+import DeHyphenatedLogo from './media/DeHyphenated.jpg';
 
 
 function HomepageHeader() {
@@ -15,8 +16,9 @@ function HomepageHeader() {
   }
   return (
     <div>
-      <Stack direction='horizontal' className='bg-success py-3 ps-1'>
-        <h1 className={`${titleClass} fs-1 text-white`} >{t('Title')}</h1> 
+      <Stack direction='horizontal' className='bg-success mb-1 ps-1'>
+        <img src={DeHyphenatedLogo} alt="DeHyphenated Logo" className='align-middle' style={{maxHeight: '50px', maxWidth: '50px'}} />
+        <h1 className={`${titleClass} fs-1 text-white mt-3`} >{t('Title')}</h1> 
         <div className='ms-auto align-buttom'>
           <LanguageSelector />
         </div>

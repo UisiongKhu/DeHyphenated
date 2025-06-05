@@ -1,5 +1,6 @@
 {
     "Title": "DeHyphenated - Throws the hyphens away.",
+    "TitleShort": "DeHyphenated",
     "Interactions":{
         "LanguageDropdownButton": "English",
         "ConvertButton": "Convert",
@@ -9,6 +10,7 @@
     "Component":{
         "CustomTextAreaPlaceholder": "Enter the text you want to convert...",
         "ExtraSheetSelector": {
+            "SelectAll": "Select All",
             "Main": "Default Data",
             "Division": "Administration Division Name",
             "Mountain": "Mountain Name",

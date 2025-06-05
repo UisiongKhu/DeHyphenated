@@ -1,5 +1,6 @@
 {
     "Title": "DeHyphenated 棄連劃 - Kā 連劃 tàn hiat ka̍k.",
+    "TitleShort": "DeHyphenated 棄連劃",
     "Interactions":{
         "LanguageDropdownButton": "漢羅 lām",
         "ConvertButton": "轉換",
@@ -9,6 +10,7 @@
     "Component":{
         "CustomTextAreaPlaceholder": "請 tī chia 輸入 beh ài 轉換 ê 文字...",
         "ExtraSheetSelector": {
+            "SelectAll": "Chiâu 讀",
             "Main": "Default 資料",
             "Division": "行政區劃名",
             "Mountain": "山名",

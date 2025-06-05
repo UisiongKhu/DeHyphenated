@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import HomepageHeader from './HomepageHeader';
 import HomepageContent from './HomepageContent';
 import HomepageFooter from './HomepageFooter';
+import { useTranslation } from "react-i18next";
 import './locale/i18n';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Stack, Col } from 'react-bootstrap';
@@ -12,7 +13,6 @@ import { Container, Row, Stack, Col } from 'react-bootstrap';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
 
 root.render(
   <React.StrictMode>

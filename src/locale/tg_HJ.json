@@ -1,5 +1,6 @@
 {
     "Title": "DeHyphenated 棄連劃 - 共連劃旦血捔",
+    "TitleShort": "DeHyphenated 棄連劃",
     "Interactions":{
         "LanguageDropdownButton": "漢字",
         "ConvertButton": "轉換",
@@ -9,6 +10,7 @@
     "Component":{
         "CustomTextAreaPlaceholder": "請治遮輸入卜愛轉換个文字...",
         "ExtraSheetSelector": {
+            "SelectAll": "齊讀",
             "Main": "Default 資料",
             "Division": "行政區劃名",
             "Mountain": "山名",

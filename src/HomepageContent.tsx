@@ -17,6 +17,7 @@ function HomepageContent(/*props : props*/) {
     const [mountainSheet, setMountainSheet] = useState({});
     const [riverSheet, setRiverSheet] = useState({});
     const [sheetsLoaded, setSheetsLoaded] = useState({main: false, division: false, road: false, mountain: false, river: false });
+    const [allChecked, setAllChecked] = useState(false);
     const [divisionChecked, setDivisionChecked] = useState(false);
     const [roadChecked, setRoadChecked] = useState(false);
     const [mountainChecked, setMountainChecked] = useState(false);
@@ -37,8 +38,8 @@ function HomepageContent(/*props : props*/) {
     var fetchUrl = getUrlBySheetName(sheetNames.main);
 
     useEffect(()=>{ // Query the sheet after HomepageContent rendered.
+        var tObj = sheetsLoaded;
         if(!sheetsLoaded.main){ // If main sheet not fetched, fetch it.
-            var tObj = sheetsLoaded;
             tObj.main = false;
             setSheetsLoaded(tObj);
             fetch(fetchUrl).then((res)=>res.json()).then(setSheet).catch((err)=>{return;});
@@ -46,7 +47,6 @@ function HomepageContent(/*props : props*/) {
             setSheetsLoaded(tObj);
         }
         if(divisionChecked && !sheetsLoaded.division){ // If division sheet not fetched and the checkbox of devision sheet has been checked, fetch it.
-            var tObj = sheetsLoaded;
             tObj.division = false;
             setSheetsLoaded(tObj);
             fetch(getUrlBySheetName(sheetNames.division)).then((res)=>res.json()).then(setDivisionSheet).catch((err)=>{return;});
@@ -54,7 +54,6 @@ function HomepageContent(/*props : props*/) {
             setSheetsLoaded(tObj);
         }
         if(roadChecked && !sheetsLoaded.road){ 
-            var tObj = sheetsLoaded;
             tObj.road = false;
             setSheetsLoaded(tObj);
             fetch(getUrlBySheetName(sheetNames.road)).then((res)=>res.json()).then(setRoadSheet).catch((err)=>{return;});
@@ -62,7 +61,6 @@ function HomepageContent(/*props : props*/) {
             setSheetsLoaded(tObj);
         }
         if(mountainChecked && !sheetsLoaded.mountain){
-            var tObj = sheetsLoaded;
             tObj.mountain = false;
             setSheetsLoaded(tObj);
             fetch(getUrlBySheetName(sheetNames.mountain)).then((res)=>res.json()).then(setMountainSheet).catch((err)=>{return;});
@@ -70,14 +68,14 @@ function HomepageContent(/*props : props*/) {
             setSheetsLoaded(tObj);
         }
         if(riverChecked && !sheetsLoaded.river){
-            var tObj = sheetsLoaded;
             tObj.river = false;
             setSheetsLoaded(tObj);
             fetch(getUrlBySheetName(sheetNames.riverAndWaterFacility)).then((res)=>res.json()).then(setRiverSheet).catch((err)=>{return;});
             tObj.river = true;
             setSheetsLoaded(tObj);
         }
-    },[divisionChecked, roadChecked, mountainChecked, riverChecked]);
+        setAllChecked(isAllChecked());
+    },[divisionChecked, roadChecked, mountainChecked, riverChecked, allChecked]);
 
     const handleConvertButtonClicked = () => {
         var _t : string = "";
@@ -132,6 +130,9 @@ function HomepageContent(/*props : props*/) {
     const handleTextareaChanged = (newContent : string) => {
         setTextAreaContent(newContent);
     }
+    const isAllChecked = () => {
+        return divisionChecked && roadChecked && mountainChecked && riverChecked;
+    }
     const handleDivisionChecked = () => {
         setDivisionChecked(!divisionChecked);
     };
@@ -143,6 +144,13 @@ function HomepageContent(/*props : props*/) {
     };
     const handleRiverChecked = () => {
         setRiverChecked(!riverChecked);
+    };
+    const handleAllChecked = () => {
+        setDivisionChecked(!allChecked);
+        setMountainChecked(!allChecked);
+        setRiverChecked(!allChecked);
+        setRoadChecked(!allChecked);
+        setAllChecked(!allChecked);
     };
 
     return(
@@ -159,6 +167,7 @@ function HomepageContent(/*props : props*/) {
                     <Stack direction="vertical" gap={2} className="vw-10">
                         <Form className="border border-success rounded rounded-3 mb-2" >
                             <Form.Check className="ms-1" disabled checked type='checkbox' id='divisionCheckbox' label={`${t('Component.ExtraSheetSelector.Main')} ${sheetsLoaded.main ? `(${t('Workflow.Loaded')})`:`(${t('Workflow.Loading')})`}`}/>
+                            <Form.Check className="ms-1" checked={allChecked} onChange={handleAllChecked} type='checkbox' id='selectAllCheckbox' label={t('Component.ExtraSheetSelector.SelectAll')} />
                             <Form.Check className="ms-1" checked={divisionChecked} onChange={handleDivisionChecked}  type='checkbox' id='divisionCheckbox' label={`${t('Component.ExtraSheetSelector.Division')} ${divisionChecked ? (sheetsLoaded.division ? `(${t('Workflow.Loaded')})`:`(${t('Workflow.Loading')})`):''}`}/>
                             <Form.Check className="ms-1" checked={mountainChecked} onChange={handleMountainChecked} type='checkbox' id='mountainCheckbox' label={`${t('Component.ExtraSheetSelector.Mountain')} ${mountainChecked ? (sheetsLoaded.mountain ? `(${t('Workflow.Loaded')})`:`(${t('Workflow.Loading')})`):''}`}/>
                             <Form.Check className="ms-1" checked={roadChecked} onChange={handleRoadChecked} type='checkbox' id='roadCheckbox' label={`${t('Component.ExtraSheetSelector.Road')} ${roadChecked ? (sheetsLoaded.road ? `(${t('Workflow.Loaded')})`:`(${t('Workflow.Loading')})`):''}`}/>
