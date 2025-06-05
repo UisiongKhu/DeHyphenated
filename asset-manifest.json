@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DeHyphenated/static/css/main.f631a816.css",
-    "main.js": "/DeHyphenated/static/js/main.98935e16.js",
+    "main.js": "/DeHyphenated/static/js/main.0a487213.js",
     "static/js/453.419a5d54.chunk.js": "/DeHyphenated/static/js/453.419a5d54.chunk.js",
     "static/media/GenSekiGothic2JP-M.otf": "/DeHyphenated/static/media/GenSekiGothic2JP-M.5db4d7b59e1569653896.otf",
     "static/media/jf-openhuninn-2.1.ttf": "/DeHyphenated/static/media/jf-openhuninn-2.1.6f14281ed7844dfc0e76.ttf",
@@ -9,11 +9,11 @@
     "static/media/DeHyphenated.jpg": "/DeHyphenated/static/media/DeHyphenated.1e9f043785178cf52981.jpg",
     "index.html": "/DeHyphenated/index.html",
     "main.f631a816.css.map": "/DeHyphenated/static/css/main.f631a816.css.map",
-    "main.98935e16.js.map": "/DeHyphenated/static/js/main.98935e16.js.map",
+    "main.0a487213.js.map": "/DeHyphenated/static/js/main.0a487213.js.map",
     "453.419a5d54.chunk.js.map": "/DeHyphenated/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f631a816.css",
-    "static/js/main.98935e16.js"
+    "static/js/main.0a487213.js"
   ]
 }
