@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://UiSiongKhu.github.io/DeHyphenated",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -12,6 +13,7 @@
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
     "bootstrap": "^5.3.6",
+    "gh-pages": "^6.3.0",
     "i18next": "^25.0.0",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
@@ -25,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d bulid"
   },
   "eslintConfig": {
     "extends": [
