@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# DeHyphenated v0.9.2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chi̍t ê kā liân oe̍h tàn hiat ka̍k ê iù ke si.
 
-## Available Scripts
+## Án chóaⁿ ēng?
 
-In the project directory, you can run:
+### Gí giân kéng á
 
-### `npm start`
+Chiàⁿ pêng téng ū chi̍t ê kéng á (selector) thang hó hō͘ iōng chiá kéng beh khòaⁿ ê gí giân a̍h sī Tâi bûn ê iōng jī.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Su ji̍p kheng á
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Tó pêng ê kheng sī su ji̍p kheng, tī chiá su ji̍p beh ài chóaⁿ ōaⁿ ê jī.
 
-### `npm test`
+### Chu liāu chi̍p kéng á
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Chiàⁿ pêng bīn ê tōa kheng lāi té pau 4 tiuⁿ lia̍h gōa ê chu liāu pió hō͘ iōng chiá kéng. Thang hó cheng ka choan iú miâ sû ê lâi goân.
 
-### `npm run build`
+### Chhi̍h á khu he̍k
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ū saⁿ lia̍p chhi̍h á, **choán ōaⁿ**, **chheng tû** kap **khá pih**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Ū siáⁿ mí chu liāu?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Tû khí chit 4 tioⁿ, koh ū ki thaⁿ ê miâ sû chu liāu teh chéng lí. Siông sè ê chu sìn iā tng teh chéng lí...
