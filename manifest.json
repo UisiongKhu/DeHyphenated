@@ -1,16 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "DeHyphenated",
+  "name": "DeHyphenated Khì Liân Oe̍h 棄連劃",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "DeHyphenated_50.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/jpg"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "DeHyphentaed.jpg",
+      "type": "image/jpg",
+      "sizes": "200x200"
     },
     {
       "src": "logo512.png",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#198754"
 }
