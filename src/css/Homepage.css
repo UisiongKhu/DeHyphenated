@@ -20,3 +20,21 @@
 .homepage-title-hanji {
     font-family: 'poj-phiaute', 'GenSekiGothicJP-M', sans-serif
 }
+
+.notice-board-header button.accordion-button {
+    background-color: #198754 !important;
+    color: white !important;
+}
+.notice-board-header button.accordion-button:not(.collapsed) {
+    background-color: #198754 !important;
+    color: white !important;
+}
+
+.notice-board-border-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.notice-board-border-buttom {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}

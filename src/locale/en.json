@@ -15,7 +15,12 @@
             "Division": "Administration Division Name",
             "Mountain": "Mountain Name",
             "Road": "Road Name",
+            "Street": "Street Name",
             "RiverAndWaterFacility": "River and Water Facility Name"
+        },
+        "NoticeBoard": {
+            "Title": "Notice Board",
+            "NoNotice": "There's nothing to show."
         }
     },
     "Workflow":{

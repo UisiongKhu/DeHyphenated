@@ -1,4 +1,4 @@
-# DeHyphenated v0.9.2
+# DeHyphenated v0.9.3
 
 Chi̍t ê kā liân oe̍h tàn hiat ka̍k ê iù ke si.
 
@@ -14,7 +14,7 @@ Tó pêng ê kheng sī su ji̍p kheng, tī chiá su ji̍p beh ài chóaⁿ ōa�
 
 ### Chu liāu chi̍p kéng á
 
-Chiàⁿ pêng bīn ê tōa kheng lāi té pau 4 tiuⁿ lia̍h gōa ê chu liāu pió hō͘ iōng chiá kéng. Thang hó cheng ka choan iú miâ sû ê lâi goân.
+Chiàⁿ pêng bīn ê tōa kheng lāi té pau 5 tiuⁿ lia̍h gōa ê chu liāu pió hō͘ iōng chiá kéng. Thang hó cheng ka choan iú miâ sû ê lâi goân.
 
 ### Chhi̍h á khu he̍k
 
@@ -22,4 +22,4 @@ Chiàⁿ pêng bīn ê tōa kheng lāi té pau 4 tiuⁿ lia̍h gōa ê chu liāu
 
 ## Ū siáⁿ mí chu liāu?
 
-Tû khí chit 4 tioⁿ, koh ū ki thaⁿ ê miâ sû chu liāu teh chéng lí. Siông sè ê chu sìn iā tng teh chéng lí...
+Tû khí chit 5 tioⁿ, koh ū ki thaⁿ ê miâ sû chu liāu teh chéng lí. Siông sè ê chu sìn iā tng teh chéng lí...

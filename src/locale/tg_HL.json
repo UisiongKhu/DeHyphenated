@@ -15,7 +15,12 @@
             "Division": "行政區劃名",
             "Mountain": "山名",
             "Road": "路名",
+            "Street": "街名",
             "RiverAndWaterFacility": "溪．河．水利設施名"
+        },
+        "NoticeBoard": {
+            "Title": "公告枋",
+            "NoNotice": "無消息 thang 公告"
         }
     },
     "Workflow":{

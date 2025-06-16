@@ -15,7 +15,12 @@
             "Division": "Hêng chèng khu miâ",
             "Mountain": "Soaⁿ miâ",
             "Road": "Lō͘ miâ",
+            "Street": "Ke miâ",
             "RiverAndWaterFacility": "Khe, hô, chúi lī siat si miâ"
+        },
+        "NoticeBoard": {
+            "Title": "KONG KÒ PANG",
+            "NoNotice": "Bô siau sit thang kong kò."
         }
     },
     "Workflow":{
